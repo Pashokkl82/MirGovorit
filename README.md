@@ -40,11 +40,21 @@ pip install -r requirements.txt
 ```  
 
 3. Так как СУБД выбрана postgresql нужно создать предварительно БД  
+```
    CREATE DATABASE postgres_dish OWNER postgres;  
    GRANT ALL privileges ON DATABASE postgres_dish TO postgres;
-
+```
 
 4. Запустит сервер приложения и пройдите по адресу [http://127.0.0.1:8000/](http://127.0.0.1:8000/) 
 ```  
 python manage.py runserver
 ```  
+
+5. Примеры запросов GET
+```
+http://127.0.0.1:8000/api/add_product_to_recipe/?recipe_id=3422b448-2460-4fd2-9183-8000de6f8349&product_id=3422b448-2460-4fd2-9183-8000de6f8347&weight=10
+
+http://127.0.0.1:8000/api/cook_recipe/?recipe_id=3422b448-2460-4fd2-9183-8000de6f8348
+
+http://127.0.0.1:8000/api/show_recipes_without_product/?product_id=3422b448-2460-4fd2-9183-8000de6f8341
+```
