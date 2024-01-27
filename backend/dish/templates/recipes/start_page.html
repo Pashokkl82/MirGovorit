@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parser</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<style>
+
+main {
+margin: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    font-size: small;
+}
+th, td {
+    text-align: center;
+    padding: 2px;
+    border: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+.form-group {
+    width: fit-content;
+}
+
+</style>
+
+<body>
+<main>
+   <table>
+    <tr>
+        <th>Recipe_ID</th>
+        ...
+        <th>Recipe Name</th>
+    </tr>
+    {% for key, value in recipes.items %}
+    <tr>
+        <td>{{ key }}</td>
+        <td>{{ value }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</main>
+</body>
+</html>
