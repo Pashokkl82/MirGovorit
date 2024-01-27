@@ -1,4 +1,4 @@
-# Parser
+# Тестовое задание MirGovorit backend
 ### Общая информация
 
 
@@ -29,8 +29,8 @@
 
 1. Произведите клонирование проекта с удаленного репозитория и перейдите в папку проекта:
 ```
-git clone https://gitlab.com/Pashokkl/parser.git
-cd parser/backend/
+git clone https://github.com/Pashokkl82/MirGovorit.git
+cd backend/
 ```
 
 2. Создайте виртуальное окружение для проекта и установите необходимые зависимости из файла *requirements.txt*:  
@@ -38,7 +38,13 @@ cd parser/backend/
 pipenv shell  
 pip install -r requirements.txt  
 ```  
-3. Запустит сервер приложения и пройдите по адресу [http://127.0.0.1:8000/](http://127.0.0.1:8000/) 
+
+3. Так как СУБД выбрана postgresql нужно создать предварительно БД  
+   CREATE DATABASE postgres_dish OWNER postgres;  
+   GRANT ALL privileges ON DATABASE postgres_dish TO postgres;
+
+
+4. Запустит сервер приложения и пройдите по адресу [http://127.0.0.1:8000/](http://127.0.0.1:8000/) 
 ```  
 python manage.py runserver
 ```  
