@@ -47,6 +47,8 @@ pip install -r requirements.txt
 
 4. Запустит сервер приложения и пройдите по адресу [http://127.0.0.1:8000/](http://127.0.0.1:8000/) 
 ```  
+python manage.py makemigrations
+python manage.py migrate
 python manage.py runserver
 ```  
 
